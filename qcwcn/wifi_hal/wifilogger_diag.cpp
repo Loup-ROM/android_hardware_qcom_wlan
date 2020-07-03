@@ -2681,7 +2681,8 @@ wifi_error diag_message_handler(hal_info *info, nl_msg *msg)
     }
 
     if (!clh) {
-         ALOGE("Invalid data received from driver");
+	 // HACK: Temp. Stop spamming logcat logs (for now).
+         //ALOGE("Invalid data received from driver");
          return WIFI_SUCCESS;
     }
     /* Check nlmsg_type also to avoid processing unintended msgs */
